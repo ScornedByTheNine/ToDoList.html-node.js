@@ -1,0 +1,10 @@
+<div class="wrapper">
+  <h1>To Do List</h1>
+  <form [formGroup]="form" (submit)="addItem(form)">
+    <input formControlName="toDoItem" class="input-item" type="text" name="toDoItem">
+    <button class="add-btn" type="submit">Add</button>
+  </form> 
+  <div *ngFor="let item of toDoArray" class = "toDoItems">
+    <p class="item" (click)="removeItem(item)">{{ item }}</p>
+  </div>
+</div> 

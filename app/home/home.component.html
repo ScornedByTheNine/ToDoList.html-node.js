@@ -1,0 +1,7 @@
+ <h1>{{ greeting }}</h1>
+<h2>My name is : {{ name }}</h2>
+<input [(ngModel)]="name">
+<div *ngFor="let c of cities">
+  <h3>{{ c }}</h3>
+  </div>
+<p> you have {{ amount | currency:'GBP':true }} left to spend as of {{ date | date: 'dd/mm/yy' }}.</p>
